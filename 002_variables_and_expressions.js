@@ -9,3 +9,18 @@ console.log("userName:", userName)
   multiline
   comment
 */
+
+// declaraton
+var age
+// initialization
+age = 6
+console.log(age)
+console.log(age)
+console.log(age)
+
+// copies the variable int a new
+var newAge = age
+
+// expressions
+var message = "newAge = " + newAge
+console.log("message:", message)
