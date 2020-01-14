@@ -11,3 +11,5 @@ document.getElementById("button").onclick = function(){
   // remove button from display
   document.getElementById("button").style.display = "none"
 }
+
+// AJAX > asynchronous javascript...

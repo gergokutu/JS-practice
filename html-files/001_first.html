@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <!-- asynchronously grab the file with defer
-    same result as script at the end of the body -->
-    <!-- <script defer src="../001_first.js"></script> -->
-    <!-- async is similar but starts to execute the file immediately -->
-    <script async src="../001_first.js"></script>
+    same result as script at the end of the body
+    wait for everything to load on the page -->
+    <script defer src="../001_first.js"></script>
+    <!-- async is similar but starts to execute the file immediately 
+    do not wait for anything to load 
+    we need the defer now -->
+    <!-- <script async src="../001_first.js"></script> -->
   </head>
 
   <body>
