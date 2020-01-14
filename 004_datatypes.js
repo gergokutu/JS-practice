@@ -43,4 +43,5 @@ console.log(grades[index])
   let yourName = new String("Mogyi")
   console.log(typeof(myName)) // string
   console.log(typeof(yourName)) // object
+  console.log(yourName) // String {"Mogyi"} > 0: "M", 1: "o", ... length: 5 
 }
