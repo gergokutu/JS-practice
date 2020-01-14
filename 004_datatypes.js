@@ -43,5 +43,37 @@ console.log(grades[index])
   let yourName = new String("Mogyi")
   console.log(typeof(myName)) // string
   console.log(typeof(yourName)) // object
-  console.log(yourName) // String {"Mogyi"} > 0: "M", 1: "o", ... length: 5 
+  console.log(yourName) // String {"Mogyi"} > 0: "M", 1: "o", ... length: 5
+  
+  // convert back to primitive
+  yourName = yourName.valueOf();
+  console.log(typeof(yourName)) // string
+
+  // 99% of time you can use the primitive types
+}
+
+{
+// numbers
+// by default 64bit floating point numbers > double precision floating point numbers
+// limits of storing integers safely
+console.log(Number.MAX_SAFE_INTEGER) // 9007199254740991
+console.log(Number.MIN_SAFE_INTEGER) // -9007199254740991
+
+let x = 5
+console.log(Number.isSafeInteger(x)) // true
+x = 9007199254740992
+console.log(Number.isSafeInteger(x)) // false
+
+// special values
+// Nan > not a number
+console.log(Number.POSITIVE_INFINITY)
+console.log(Number.NEGATIVE_INFINITY)
+console.log(Number.NaN)
+
+let babies = 9007199254740991
+console.log(Math.pow(babies, 200)) // Infinity
+console.log(Math.pow(babies, 200) * -2) // -Infinity
+
+let name = "Bori"
+console.log(Math.pow(name, 200)) // Nan
 }
