@@ -8,4 +8,6 @@
 // "Order placed. Check email for confirmation"
 document.getElementById("button").onclick = function(){
   document.getElementById("confirm").innerHTML = "Order placed. Check email for confirmation"
+  // remove button from display
+  document.getElementById("button").style.display = "none"
 }

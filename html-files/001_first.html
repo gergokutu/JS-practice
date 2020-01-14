@@ -3,11 +3,16 @@
   <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!-- asynchronously grab the file with defer
+    same result as script at the end of the body -->
+    <!-- <script defer src="../001_first.js"></script> -->
+    <!-- async is similar but starts to execute the file immediately -->
+    <script async src="../001_first.js"></script>
   </head>
 
   <body>
     <p id="confirm">Confirm purchase?</p>
     <button id="button">Confirm</button>
-    <script src="../001_first.js"></script>
+    <!-- <script src="../001_first.js"></script> -->
   </body>
 </html>
