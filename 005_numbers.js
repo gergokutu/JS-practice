@@ -99,3 +99,61 @@
   console.log("Decimal", input + " to octal:", input.toString(8))
   console.log("Decimal", input + " to hexadecimal:", input.toString(16))
 }
+
+// Number instance methods and Math object
+{
+  // Number.
+  // blue boxes in VS code > properties (values)
+  // purple boxes > methods
+  // call them directly on Number
+  // Number is a contstructor > way to create new objects
+  console.log(Number.parseInt("10.9")) 
+
+  // call it on an instance
+  let x = 25
+  xString = x.toString()
+  console.log(xString, "is a string now")
+
+  // __proto__ > prototype/inheritance chain
+  // new instances (like x) is automatically attached to prototype (like Number object)
+
+  // convert 25 to exponential format with .00000 (five zeros)
+  console.log(x.toExponential(5))  // 2.500000e+1 > 2.5 * 10^1 > 25
+  console.log("$", x.toFixed(2))
+
+  let y = 25.2501212423423
+  console.log("EUR", y.toLocaleString())
+  console.log(y.toPrecision(3))
+  
+  // valueOf > returns the primitive value of the object
+  let z = new Number(25.2501212423423)
+  console.log(typeof(z))
+  console.log(typeof(z.valueOf()))
+
+  // Math object
+  var abs = Math.abs(-36) // 36
+  console.log(abs)
+
+  var roundUp = Math.ceil(.0001) // 1
+  console.log(roundUp)
+
+  var roundDown = Math.floor(.9999) // 0
+  console.log(roundDown)
+
+  var raiseToPower = Math.pow(3, 2) // 9
+  console.log(raiseToPower)
+
+  var squareRoot = Math.sqrt(9) // 3
+  console.log(squareRoot)
+
+  var round1 = Math.round(4.9) // 5
+  var round2 = Math.round(5.1) // 5
+  console.log(round1)
+  console.log(round2)
+
+  var isPositive = Math.sign(-Infinity) // -1 (false)
+  console.log(isPositive)
+
+  var getInt = Math.trunc(4.99999) // 4
+  console.log(getInt)
+}
