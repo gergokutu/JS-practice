@@ -1,5 +1,5 @@
 {
-  let name = "Pocok"
+  const name = "Pocok"
 
   // strict equality vs loose equality
   // strict > compares both value and type
@@ -33,3 +33,22 @@
 // do something on a condition
 // branching
 // generalization > program works in different situations
+
+// comparison operators > MDN
+{
+  const number = 10;
+
+  if (number === 0) {
+    console.log("Zero")
+  } else if ( number < 0) {
+    console.log("Negative")
+  } else if (number > 0) {
+    console.log("Positive")
+  }
+
+  if (number !== 0) {
+    console.log("It's not zero")
+  }
+
+  // there is also >=, <=, ==...
+}
