@@ -87,9 +87,16 @@
 
 //single line if statement
 {
-  let name = "Pocok"
-
+  const name = "Pocok"
   if (name === "Pocok") console.log(`Welcome ${name}!`)
 }
 
 // Ternary operators
+{
+  const isMemeber = true
+  isMemeber ? console.log("Welcome!") : console.log("Good-bye!")
+
+  const pointsA = 10
+  const pointsB = 20
+  pointsA + pointsB >= 30 ? console.log("Well done") : console.log("Sorry, you failed")
+}
