@@ -15,9 +15,12 @@
   // or without anything... > bot no wrong name to console
 
   switch(name) {
+    // if you want to happen something in multiple cases
+    // delete everything between the cases
     case "Pocok":
       console.log("Welcome!")
       // try without break
+      // break prevents fall-through
       break
     case "pocok":
       console.log("Write pocok with capitol P!")
@@ -25,6 +28,8 @@
     default:
       console.log("Wrong name!")
       // break is not necedsary here but good convention
+      // other languages can require it
+      // easier when we reorder the switch
       break
   }
 }
@@ -77,4 +82,14 @@
   // they are the same
   // if (age >= 20 || !(isMember === "yes"))
   // if (age >= 20 || isMember !== "yes"
+  // you can check boolean algebra...
 }
+
+//single line if statement
+{
+  let name = "Pocok"
+
+  if (name === "Pocok") console.log(`Welcome ${name}!`)
+}
+
+// Ternary operators
