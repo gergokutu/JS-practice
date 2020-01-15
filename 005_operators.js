@@ -93,6 +93,7 @@
   console.log("Octal:", Number.parseInt(input, 8))
   console.log("Hexadecimal:", Number.parseInt(input, 16))
 
+  // toString(radix)
   console.log("Decimal", input + " to decimal:", input)
   console.log("Decimal", input + " to binary:", input.toString(2))
   console.log("Decimal", input + " to octal:", input.toString(8))
