@@ -73,4 +73,8 @@
   if (!firstTime) {
     console.log("Show me your member card, please!")
   }
+
+  // they are the same
+  // if (age >= 20 || !(isMember === "yes"))
+  // if (age >= 20 || isMember !== "yes"
 }
