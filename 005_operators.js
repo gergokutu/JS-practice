@@ -81,3 +81,20 @@
   let zInt3 = Number.parseInt("10.9 should be a number") // 10
   console.log(zInt3)
 }
+
+// converting numbers
+{
+  var input = 11
+  console.log("Decimal:", input)
+  // radix > the base
+  // Number.parseInt(input, radix)
+  // binary 11 > is decimal 3 
+  console.log("Binary:", Number.parseInt(input, 2))
+  console.log("Octal:", Number.parseInt(input, 8))
+  console.log("Hexadecimal:", Number.parseInt(input, 16))
+
+  console.log("Decimal", input + " to decimal:", input)
+  console.log("Decimal", input + " to binary:", input.toString(2))
+  console.log("Decimal", input + " to octal:", input.toString(8))
+  console.log("Decimal", input + " to hexadecimal:", input.toString(16))
+}
