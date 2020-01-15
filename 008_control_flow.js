@@ -28,3 +28,8 @@
       break
   }
 }
+
+// benefit of control flows
+// do something on a condition
+// branching
+// generalization > program works in different situations
