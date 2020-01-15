@@ -52,3 +52,25 @@
 
   // there is also >=, <=, ==...
 }
+
+// logical operators
+// !, &&, ||
+// logical not, and, or
+{
+  const age = 20
+  const isHungry = true
+  const isMember = "no"
+  const firstTime = false
+
+  if (age >= 20 && isHungry) {
+    console.log("Let's eat!")
+  }
+
+  if (age >= 20 || isMember === "yes") {
+    console.log("Enter the kitchen!")
+  }
+
+  if (!firstTime) {
+    console.log("Show me your member card, please!")
+  }
+}
