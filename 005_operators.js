@@ -58,3 +58,26 @@
   // better to design your code with the prefix way (slicesOfPizza++)
   
 }
+
+// there are a lot of number methods like parseInt and parseFloat
+{
+  // Number.
+  // x.
+  // similar to static methods > an instance is not compulsory..
+  let x = 5
+  let y = "10"
+  let yInt = Number.parseInt(y)
+  console.log(x + y)
+  console.log(x + yInt)
+
+  // parseInt does not round but truncates
+  let zInt = Number.parseInt("10.9") // 10
+  console.log(zInt)
+
+  // parseFloat
+  let zInt2 = Number.parseFloat("10.9") // 10.9
+  console.log(zInt2)
+
+  let zInt3 = Number.parseInt("10.9 should be a number") // 10
+  console.log(zInt3)
+}
