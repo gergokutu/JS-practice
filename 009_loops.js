@@ -80,12 +80,11 @@ for (let i = 0; i < 10; i++) {
   }
 }
 
-// break and continue
+// break
 // find just the first occurence
 {
   const name = "Pocok rock"
   const charToSearch = 'c'
-  // const charToIgnore = 'x'
 
   for (let i = 0; i < name.length; i++) {
     if (name[i] === charToSearch) {
@@ -96,4 +95,21 @@ for (let i = 0; i < 10; i++) {
     console.log(`Not found on place ${i + 1}.`)
   }
   console.log("Jump here because of break")
+}
+
+// continue
+// do something in every occurence
+// except for some >
+// print HI ecxept for 'c'
+{
+  const name = "Pocok"
+  const charToSearch = 'c'
+
+  for (let i = 0; i < name.length; i++) {
+    if (name[i] === charToSearch) {
+      // in this case nothing happens because of continue
+      continue
+    }
+    console.log("hi")
+  }
 }
