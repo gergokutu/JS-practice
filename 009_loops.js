@@ -79,3 +79,21 @@ for (let i = 0; i < 10; i++) {
       console.log(`Not found on place ${i + 1}.`)
   }
 }
+
+// break and continue
+// find just the first occurence
+{
+  const name = "Pocok rock"
+  const charToSearch = 'c'
+  // const charToIgnore = 'x'
+
+  for (let i = 0; i < name.length; i++) {
+    if (name[i] === charToSearch) {
+      console.log(`Found ${charToSearch} letter on place ${i + 1} of the word "Pocok".`)
+      // no iteration after the first 'c' because of break
+      break
+    }
+    console.log(`Not found on place ${i + 1}.`)
+  }
+  console.log("Jump here because of break")
+}
