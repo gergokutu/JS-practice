@@ -21,6 +21,7 @@ for (let i = 0; i < 10; i++) {
   // try with i = 10
   // condition first
   let i = 0
+
   while (i < 10) {
     console.log("while loop:", i)
     i++
@@ -29,6 +30,7 @@ for (let i = 0; i < 10; i++) {
   // do comes first
   // and check the condition after that
   let j = 10
+
   do {
     console.log("do-while loop:", j)
     j++
@@ -39,4 +41,12 @@ for (let i = 0; i < 10; i++) {
   for (let i = 0; i < 10; i++) {
     console.log("for loop:", i)
   }
+}
+
+{
+  let password
+
+  do {
+    password = prompt("What's the password")
+  } while (password.toLowerCase !== "secret")
 }
