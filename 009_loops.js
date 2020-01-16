@@ -114,3 +114,46 @@ for (let i = 0; i < 10; i++) {
     console.log("hi")
   }
 }
+
+// nested loops
+// create a downstair on the webpage
+// id="destination"
+{
+  let destination = document.getElementById("destination")
+  const space = ' '
+
+  for (let i = 0; i < 10; i++) {
+    for (let k = i; k >= 0; k--) {
+      destination.append(k + space)
+    }
+    // create a break
+    const br = document.createElement("br")
+    destination.appendChild(br)
+  }
+}
+
+// create a pyramid
+{
+  let destination2 = document.getElementById("destination2")
+  const level = 10
+  const space = '_'
+  const hash = '#'
+
+  for (let i = 0; i < level; i++) {
+    for (let j = level - i - 1; j > 0; j--) {
+      destination2.style.color = "blue"
+      destination2.append(space)
+    }
+
+    for (let k = i; k >= 0; k--) {
+      destination2.append(hash)
+    }
+    
+    for (let k = i - 1; k >= 0; k--) {
+      destination2.append(hash)
+    }
+    // create a break
+    const br = document.createElement("br")
+    destination2.appendChild(br)
+  }
+}
