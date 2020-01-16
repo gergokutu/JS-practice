@@ -71,10 +71,11 @@ for (let i = 0; i < 10; i++) {
   }
 
   // search for a particular char in a string
-  let name = "Pocok"
+  const name = "Pocok"
+  const searchChar = 'c'
   for (let i = 0; i < name.length; i++) {
-    name[i] === 'c' ? 
-      console.log(`Found "c" letter on place ${i + 1} of the word "Pocok".`) :
+    name[i] === searchChar ? 
+      console.log(`Found 'c' letter on place ${i + 1} of the word "Pocok".`) :
       console.log(name[i])
   }
 }
