@@ -108,6 +108,7 @@ for (let i = 0; i < 10; i++) {
   for (let i = 0; i < name.length; i++) {
     if (name[i] === charToSearch) {
       // in this case nothing happens because of continue
+      // you can use else instead of continue
       continue
     }
     console.log("hi")
