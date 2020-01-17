@@ -115,4 +115,19 @@
   // indexOf > index of the element / -1
   console.log(gradesA.indexOf(39))
   console.log(gradesB.indexOf(39))
+
+  // join
+  // take an array and produces a string
+  // join with specified delimiter
+  // original array isn't altered
+  console.log(gradesA.join())
+  console.log(gradesA.join(""))
+  console.log(gradesA.join(" "))
+  console.log(gradesA.join("-"))
+
+  // slice
+  // start, end (exclusive)
+  const sliced = newGrades.slice(3, 6)
+  console.log(newGrades)
+  console.log(sliced)
 }
