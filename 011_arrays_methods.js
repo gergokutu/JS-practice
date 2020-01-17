@@ -88,3 +88,25 @@
   // copy to, start (inclusive), stop (exclusive))
   console.log(grades.copyWithin(4, 0, 3))
 }
+
+{
+  let gradesA = [20, 22, 39]
+  let gradesB = [1, 2, 3]
+
+  // concat
+  // returns a new array
+  // similar to push but !!! push changes the original array
+  // !!! and returns the length 
+  const newGrades = gradesA.concat(gradesB)
+  console.log(newGrades)
+
+  // + > returns a string
+  console.log(gradesA + gradesB)
+
+  // test the push return value
+  const test = newGrades.push(12, 13, 15)
+  console.log(newGrades)
+  console.log("Return value of push():", test) // 9
+
+  //
+}
