@@ -30,3 +30,23 @@ let grades = [
 grades[1] // [3, 4, 5]
 grades[1][2] // 4
 */
+
+{
+  let array = [12, 43, 43, function(){console.log("Hohhohohoooo")}]
+  console.log(array)
+  console.log(array[0])
+  console.log(array[3]())
+
+  let grades = []
+  grades[0] = 12
+  grades[1] = 31
+  grades[5] = 99
+  console.log(grades[2]) // undefined (but the place exists)
+  console.log(grades[5])
+  console.log(grades[6]) // undefined but the place does not exist
+
+  for (let i = 0; i < grades.length; i++) {
+    console.log(grades[i])
+  }
+
+}
