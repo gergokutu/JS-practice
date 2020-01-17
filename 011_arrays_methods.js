@@ -100,7 +100,7 @@
   const newGrades = gradesA.concat(gradesB)
   console.log(newGrades)
 
-  // + > returns a string
+  // + > returns a string with arrays
   console.log(gradesA + gradesB)
 
   // test the push return value
@@ -108,5 +108,11 @@
   console.log(newGrades)
   console.log("Return value of push():", test) // 9
 
-  //
+  // includes > true/false
+  console.log(gradesA.includes(20)) // true
+  console.log(gradesB.includes(20)) // false
+
+  // indexOf > index of the element / -1
+  console.log(gradesA.indexOf(39))
+  console.log(gradesB.indexOf(39))
 }
