@@ -83,6 +83,7 @@
     }
   }
 
+  // jump out from both loops
   outerLoop: for (let i = 0; i < grades.length; i++) {
     if (grades[i] !== undefined) {
       console.log("----------New row-----------")
