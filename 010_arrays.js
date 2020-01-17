@@ -55,4 +55,9 @@ grades[1][2] // 4
     console.log(grades[i])
   }
 
+  // the array can crop the length
+  grades.length = 2
+  for (let i = 0; i < grades.length; i++) {
+    console.log(grades[i])
+  }
 }
