@@ -61,3 +61,36 @@ grades[1][2] // 4
     console.log(grades[i])
   }
 }
+
+{
+  let grades = [15, 4, 4, 66, 7, 9, 33, 4, 6, 43, 43]
+  grades.length = 30
+  grades[34] = 40
+
+  // just iterate through
+  // but skip the empty places
+  for (let i = 0; i < grades.length; i++) {
+    if (typeof(grades[i]) !== "undefined") console.log(grades[i])
+  }
+
+  // search in array
+  let found = false
+  let search = 43
+
+  for (let i = 0; i < grades.length; i++) {
+    if (grades[i] === search) {
+      // you can use found as a flag
+      found = true
+      console.log("Found:", grades[i], "at index:", i)
+      // stop after the first hit
+      break
+    }
+  }
+
+  // use the flag
+  if (found) {
+    // do something
+  }
+
+  //
+}
