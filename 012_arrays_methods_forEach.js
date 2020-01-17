@@ -12,6 +12,8 @@
 
   // forEach ignores them
   // pass a callback to forEach
+  // does not return anything
+  // modify the original array
   grades.forEach(function(item){
     console.log("forEach:", item)
   })
@@ -21,5 +23,6 @@
 
   // with map
   // ignores the undefined as well
+  // returns a new array
   grades.map(item => console.log("map:", item))
 }
