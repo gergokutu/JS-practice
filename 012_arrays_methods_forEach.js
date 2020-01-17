@@ -14,8 +14,8 @@
   // pass a callback to forEach
   // does not return anything
   // modify the original array
-  grades.forEach(function(item){
-    console.log("forEach:", item)
+  grades.forEach(function(item, index, array){
+    console.log("forEach:", item, index, array)
   })
 
   // with arrow functon
