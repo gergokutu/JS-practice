@@ -131,3 +131,54 @@ grades[1][2] // 4
   largest = grades.reduce((a, b) => Math.max(a, b))
   console.log("8 Largest is", largest)
 }
+
+{
+  let grades = [15, 4, 4, 66, 7, 9, 33, 4, 6, 43, 43]
+  grades.length = 30
+  grades[34] = 40
+
+  // find the average
+  // be careful with the gaps
+  // we have to know the lenght but cannot use the method because of gaps
+  let count = 0;
+  let total = 0;
+
+  for (let i = 0; i < grades.length; i++) {
+    if (grades[i] !== undefined) {
+      count++
+      total += grades[i]
+    }
+  }
+  
+  let average = total / count
+  console.log("1 Average:", average)
+
+  // or > reduce
+  // cannot be a gap
+  grades = [15, 4, 4, 66, 7, 9, 33, 4, 6, 43, 43, 40]
+
+  const total2 = grades.reduce((a, b) => a + b, 0)
+  const average2 = total2 / grades.length
+  // in 1 step
+  // const average2 = grades.reduce((a, b) => a + b, 0) / grades.length
+
+  console.log("2 => Average:", average2)
+
+  // reduce without arrow function
+  const total3 = function(array) {
+    return array.reduce(function(accumulator, currentValue) {
+      return (accumulator + currentValue) 
+    }, 0)
+  }
+  const average3 = total3(grades) / grades.length
+  
+  console.log("3 Average:", average3)
+
+  const average4 = function(array) {
+    return array.reduce(function(accumulator, currentValue) {
+      return (accumulator + currentValue) 
+    }, 0) / array.length
+  }
+
+  console.log("4 Average:", average4(grades))
+}
