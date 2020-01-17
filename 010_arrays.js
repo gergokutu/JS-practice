@@ -182,3 +182,27 @@ grades[1][2] // 4
 
   console.log("4 Average:", average4(grades))
 }
+
+// fill in an array with user input
+// indefinite (infinite) loop & sentinel value
+{
+  let grades = []
+
+  while (true) {
+    // prompt creates a string
+    let input = prompt("Add a grade")
+    // how to stop > sentinel value
+    // quit > q or 0 or escape
+    // or parseInt(input) === 0, input == 0, Number(input) === 0
+    if (input === "q" || input === null || input === "0") {
+      break
+    }
+    
+    // grades.push(input)
+    // we want a number > Number() constructor or parseInt
+    // grades.push(parseInt(input))
+    grades.push(Number(input))
+
+    console.log(grades)
+  }
+}
