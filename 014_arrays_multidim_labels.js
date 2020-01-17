@@ -59,6 +59,7 @@
   // apply labels!
   // we can reference outerLoop
   // to jump there instead of the next inner loop
+  // !continue with the next outerLoop
   outerLoop: for (let i = 0; i < grades.length; i++) {
     if (grades[i] !== undefined) {
       console.log("----------New row-----------")
@@ -84,6 +85,7 @@
   }
 
   // jump out from both loops
+  // !break out from the outerLoop
   outerLoop: for (let i = 0; i < grades.length; i++) {
     if (grades[i] !== undefined) {
       console.log("----------New row-----------")
