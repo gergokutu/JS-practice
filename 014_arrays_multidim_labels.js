@@ -18,6 +18,7 @@
   for (let i = 0; i < grades.length; i++) {
     if (grades[i] !== undefined) {
       console.log("----------New row-----------")
+
       for (let j = 0; j < grades[i].length; j++) {
         if (grades[i][j] !== undefined) console.log("for:", grades[i][j])
         if (grades[i][j] === 5) {
@@ -40,6 +41,7 @@
   for (let i = 0; i < grades.length; i++) {
     if (grades[i] !== undefined) {
       console.log("----------New row-----------")
+
       for (let j = 0; j < grades[i].length; j++) {
         if (grades[i][j] !== undefined) console.log("for:", grades[i][j])
         if (grades[i][j] === 5) {
@@ -54,15 +56,17 @@
     }
   }
 
-  // apply labels
+  // apply labels!
   // we can reference outerLoop
   // to jump there instead of the next inner loop
   outerLoop: for (let i = 0; i < grades.length; i++) {
     if (grades[i] !== undefined) {
       console.log("----------New row-----------")
+
       for (let j = 0; j < grades[i].length; j++) {
         if (grades[i][j] !== undefined) {
           console.log("for:", grades[i][j])
+
           if (grades[i][j] === 5) {
             console.log("Value found")
             // no "Do stuff" after 5
@@ -74,7 +78,6 @@
           // check the function body (scope)!!!
           console.log("Do stuff")
         }
-        
       }
       console.log("****************************")
     }
