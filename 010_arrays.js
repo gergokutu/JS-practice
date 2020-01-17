@@ -22,4 +22,11 @@ Multidimensional arrays:
 - arrays inside of arrays (nestes arrays)
 
 let stuff = [12, "hey", function(){console.log("hoooo")}, ["nested", "array"]]
+let grades = [
+  [5, 5, 5],
+  [3, 4, 5],
+  [4, 4, 5]
+]
+grades[1] // [3, 4, 5]
+grades[1][2] // 4
 */
