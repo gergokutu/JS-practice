@@ -6,16 +6,22 @@
     [4, 5, 6],
     [7, 8, 9]
   ]
+  grades.length = 5
+  grades[3].length = 5
+
+  console.log("grades:", grades)
 
   // outer for > rows
   // inner > columns
   for (let i = 0; i < grades.length; i++) {
-    // just put a separator line
-    // to gain better visualization
-    console.log("New row")
+    if (grades[i] !== undefined) {
+      // just put a separator line
+      // to gain better visualization
+      console.log("New row")
 
-    for (let j = 0; j < grades[i].length; j++) {
-      console.log("for:", grades[i][j])
+      for (let j = 0; j < grades[i].length; j++) {
+        if (grades[i][j] !== undefined) console.log("for:", grades[i][j])
+      }
     }
   }
 
