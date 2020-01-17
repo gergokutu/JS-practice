@@ -49,4 +49,10 @@ grades[1][2] // 4
     console.log(grades[i])
   }
 
+  // you can change the length
+  grades.length = 100
+  for (let i = 0; i < grades.length; i++) {
+    console.log(grades[i])
+  }
+
 }
