@@ -24,5 +24,25 @@
   // with map
   // ignores the undefined as well
   // returns a new array
-  grades.map(item => console.log("map:", item))
+  // faster than forEach
+  grades.map(item => console.log("map => :", item))
+
+  // how to handle the index
+  // pass it as the 2nd argument
+  // check map > MDN
+  grades.map((item, index, array) => console.log("map => :", item, "index:", index, "array:", array))
+
+  // also has a 4th argument > thisArg
+  // item, index, array, thisArg...
+  const thisArg = 1000
+
+  grades.map((item, index, array) => console.log("map => :", item, "index:", index, "array:", array, "Use 4th arg:", (thisArg + item)), thisArg)
+
+  let newArray = grades.map(function (item, index, array) {
+    console.log("item:", item, "index:", index, "array:", array, "thisArg", thisArg)
+    return thisArg + item
+  }, thisArg)
+
+  console.log("New array:", newArray)
+  console.log("grades:", grades)
 }
