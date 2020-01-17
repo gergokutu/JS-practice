@@ -92,5 +92,42 @@ grades[1][2] // 4
     // do something
   }
 
-  //
+  // find the biggest element in the array
+  // assume that the first the largest
+  // compare it to the next
+  // reassign the value of largest
+  let largest = grades[0]
+
+  for (let i = 0; i < grades.length; i++) {
+    if (grades[i] > largest) largest = grades[i]
+  }
+
+  console.log("1 Largest is", largest)
+
+  // or > map + ternary
+  grades.map(number => number > largest ? largest = number : largest)
+  console.log("2 Largest is", largest)
+
+  // or > sort()
+  // if there is empty values >
+  // at the and you find in this case undefined
+  // so reassign the array
+  grades = [15, 4, 4, 66, 7, 9, 33, 4, 6, 43, 43]
+  console.log("3 Largest is", grades.sort((a,b) => a-b)[grades.length - 1])
+  // reverse()
+  console.log("4 Largest is", grades.sort((a,b) => a-b).reverse()[0])
+
+  // or > Math.max
+  console.log("5 Largest is", Math.max(...grades))
+
+  // or > Math.max.apply()
+  console.log("6 Largest is", Math.max.apply(null, grades))
+
+  // or > reduce + ternary
+  largest = grades.reduce((a, b) => a > b ? a : b)
+  console.log("7 Largest is", largest)
+
+  // or > reduce + ternary
+  largest = grades.reduce((a, b) => Math.max(a, b))
+  console.log("8 Largest is", largest)
 }
