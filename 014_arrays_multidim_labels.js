@@ -23,6 +23,7 @@
         if (grades[i][j] === 5) {
           console.log("Value found")
           // skip the rest of the inner for loop
+          // no "Do stuff" after 5
           // no 6...
           break
         }
@@ -32,6 +33,7 @@
         // // only 1 "Do stuff" after 9
         // if (grades[i][j] !== undefined) console.log("Do stuff")
       }
+      console.log("****************************")
     }
   }
 
@@ -48,6 +50,7 @@
         }
         if (grades[i][j] !== undefined) console.log("Do stuff")
       }
+      console.log("****************************")
     }
   }
 
@@ -58,15 +61,22 @@
     if (grades[i] !== undefined) {
       console.log("----------New row-----------")
       for (let j = 0; j < grades[i].length; j++) {
-        if (grades[i][j] !== undefined) console.log("for:", grades[i][j])
-        if (grades[i][j] === 5) {
-          console.log("Value found")
-          // no "Do stuff" after 5
-          // no 6...
-          continue outerLoop
+        if (grades[i][j] !== undefined) {
+          console.log("for:", grades[i][j])
+          if (grades[i][j] === 5) {
+            console.log("Value found")
+            // no "Do stuff" after 5
+            // no 6...
+            // no **********************
+            continue outerLoop
+          }
+          // no 3 "Do stuff" after 9
+          // check the function body (scope)!!!
+          console.log("Do stuff")
         }
-        if (grades[i][j] !== undefined) console.log("Do stuff")
+        
       }
+      console.log("****************************")
     }
   }
 }
