@@ -82,4 +82,24 @@
       console.log("****************************")
     }
   }
+
+  outerLoop: for (let i = 0; i < grades.length; i++) {
+    if (grades[i] !== undefined) {
+      console.log("----------New row-----------")
+
+      for (let j = 0; j < grades[i].length; j++) {
+        if (grades[i][j] !== undefined) {
+          console.log("for:", grades[i][j])
+
+          if (grades[i][j] === 5) {
+            console.log("Value found")
+            // nothing after 5
+            break outerLoop
+          }
+          console.log("Do stuff")
+        }
+      }
+      console.log("****************************")
+    }
+  }
 }
