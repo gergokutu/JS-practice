@@ -13,7 +13,7 @@
     // just put a separator line
     // to gain better visualization
     console.log("New row")
-    
+
     for (let j = 0; j < grades[i].length; j++) {
       console.log("for:", grades[i][j])
     }
@@ -21,7 +21,8 @@
 
   // forEach
   grades.forEach(function (row) {
-    return row.forEach(function (item) {
+    // return is not necessary to the next line
+    row.forEach(function (item) {
       console.log("forEach:", item)
     })
   })
