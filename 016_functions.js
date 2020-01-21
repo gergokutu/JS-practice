@@ -31,5 +31,36 @@ name(variable1, variable2) // 30
   - objects can be returned from functions > so functions can be returned from functions
   - so functions can be inout and output
   - bind, this...
-  - passing by value, passing by reference...
+  - passing arguments by value, passing arguments by reference...
+
+  Passing arguments:
+  - passed by value > the value of the argument is copied the parameter
+  - changes to variable inside the function does not persist outside of the function
+  - e.g. variable1 stays 5 (in case of primitives)
+  - in case of complex types (objects)
+    - assign an object to a variable > stores a reference to that object (where it is stored in the memory)
+    - the passed argument and the parameter references (points) to the same object
+    - changes in the function affects the object outside of the function!!!
+    - passing by reference
+    - exeption > new object cannot be created this way
+      - it will live only inside the function scope
 */
+
+{ 
+  // let myObject // with this line the console.log > same as inside create()
+  const passToObj = {name: "Kutu", age: "1"}
+  function create(name) {
+    // myObject = {name: "Pocok", age: 999}
+    let myObject = {name: "Pocok", age: 999}
+    console.log(myObject)
+    
+    myObject.name = name.name
+    myObject.age = name.age
+    console.log(myObject)
+  }
+
+  // create()
+  create(passToObj)
+  // myObject is not defined if it is only declared inside the function
+  // console.log(myObject)
+}
