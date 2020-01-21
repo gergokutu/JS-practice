@@ -3,8 +3,8 @@ Hoisting
 - function declarations and expressions are hoisted differently
 - hoisting
   - JS codes scanned first
-    - variable declarations
-  - then executed
+    - variable declarations happens
+  - then codes are executed line by line
 - all function declarations are hoisted
   - included the functions inside the body
 - func expression > only the variable hoisted
@@ -28,5 +28,15 @@ Hoisting
 }
 
 {
-  
+  // console.log(y) // error
+  var x
+  console.log(x)
+  x = 10 // 10
+
+  // let and const are different from var
+  // never can be able to use the variable before it'S assigned!!!
+  // 3 step process
+  // declaration (let does not get a memory place with undefined), initialization, assignement...
+  console.log(z)
+  let z = 10 // error: cannot access z before initialization
 }
