@@ -57,7 +57,13 @@ Date.now()
 }
 
 {
-  // 
-  let myDate = new Date(2020, 0, 21)
-  console.log(myDate)
+  // add and subtract dates
+  let before = new Date(2020, 0, 21)
+  let after = new Date(2020, 0, 26)
+  let days = after - before
+  console.log(days) // milliseconds
+  // convert the milliseconds to days
+  // divide the miliseconds by millisecs-in-1-day
+  let oneDay = 1000 * 60 * 60 * 24
+  console.log("Days:", days / oneDay)
 }
