@@ -53,7 +53,7 @@ name(variable1, variable2) // 30
     // myObject = {name: "Pocok", age: 999}
     let myObject = {name: "Pocok", age: 999}
     console.log(myObject)
-    
+
     myObject.name = name.name
     myObject.age = name.age
     console.log(myObject)
@@ -63,4 +63,51 @@ name(variable1, variable2) // 30
   create(passToObj)
   // myObject is not defined if it is only declared inside the function
   // console.log(myObject)
+}
+
+/*
+Callbacks
+- pass a function as an argument to another function
+- and that function invokes the passed functioon
+- higher order functions > the function that accepts another function
+*/
+
+{
+  function add(a, b) {
+  return a + b
+  }
+
+  let subtract = (boci, pipi) => boci - pipi
+
+  function addOrSubtract (num1, num2, callback) {
+    return callback(num1, num2)
+  }
+
+  // function expression
+  // let addOrSubtract = function(num1, num2, callback) {
+  //   return callback(num1, num2)
+  // }
+
+  // same with arrow function
+  // let addOrSubtract = (num1, num2, callback) => callback(num1, num2)
+
+  const number1 = 10
+  const number2 = 20
+
+  // when passing the function > do not use the ()!!!
+  // because that would invoke the function
+  console.log(addOrSubtract(number1, number2, add))
+  console.log(addOrSubtract(number1, number2, subtract))
+
+// Async callbacks
+// use a function expression
+// setTimeout is a higher order function
+// AJAX > Async Javascript and XML > load data to page async without page reload...
+  let print = function(){
+    console.log("Async => Delayed")
+  }
+
+  setTimeout(print, 2000)
+  setTimeout(print, 0)
+  console.log("Not Async")
 }
