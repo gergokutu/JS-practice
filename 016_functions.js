@@ -107,7 +107,64 @@ Callbacks
     console.log("Async => Delayed")
   }
 
-  setTimeout(print, 2000)
+  setTimeout(print, 1000)
   setTimeout(print, 0)
   console.log("Not Async")
+}
+
+// function declarations and expressions
+// func declaration
+{
+  function pow(base, pow) {
+    let total = 1;
+    for (let i = 0; i < pow; i++) {
+      total *= base
+    }
+    return total
+  }
+  
+  // invoking the func inside console.log
+  console.log("Pow func:", pow(2, 3))
+
+  // assign it to a variable
+  let pow2 = function(base, pow) {
+    let total = 1;
+    for (let i = 0; i < pow; i++) {
+      total *= base
+    }
+    return total
+  }
+  
+  console.log("Pow func assigned to a variable:", pow2(2, 3))
+
+  // with arrow function
+  let pow3 = (base, pow) => {
+    let total = 1;
+    for (let i = 0; i < pow; i++) {
+      total *= base
+    }
+    return total
+  }
+  
+  // ; > because of the next IIFE
+  console.log("Pow func => :", pow3(2, 3));
+
+  // IIFE
+  // beacuse of IIFE default value needed
+   (function(base = 2, pow = 3) {
+    let total = 1;
+    for (let i = 0; i < pow; i++) {
+      total *= base
+    }
+    console.log("IIFE:", total)
+  })();
+
+  // IIFE with arrow function
+  ((base = 2, pow = 3) => {
+    let total = 1;
+    for (let i = 0; i < pow; i++) {
+      total *= base
+    }
+    console.log("IIFE => :", total)
+  })();
 }
