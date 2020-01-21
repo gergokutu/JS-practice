@@ -27,3 +27,37 @@ var unixEpoch = new Date (0)
 // 1579596483644
 Date.now()
 */
+{
+  // if we give a non-valid value > converts it to valid
+  // e.g 2020, 12, 21 > jan 21, 2021
+  let myDate = new Date(2020, 0, 21)
+  console.log(myDate)
+}
+
+{
+  // with 1 argument passed > miliseconds > from UNIX Epoch
+  let myDate = new Date(2020324535234242)
+  console.log(myDate)
+
+  let dateNow = new Date(Date.now())
+  // keep track of time
+  let time = Date.now()
+  console.log(dateNow)
+
+  // get the time span of executing codes
+  let start = Date.now()
+  let x = 0
+  for (i = 0; i < 1000000; i++) {
+    x += i 
+  }
+  let stop = Date.now()
+  let totalTime = stop - start
+  console.log("Time took:", totalTime)
+  console.log(x)
+}
+
+{
+  // 
+  let myDate = new Date(2020, 0, 21)
+  console.log(myDate)
+}
