@@ -12,3 +12,19 @@ Arrow functions
   - value determined by => where the function is created
   - and not how it's called...
 */
+{
+  function cube(x) {
+    return x * x * x
+  }
+  console.log("Regular func:", cube(5))
+
+  // arrow version
+  // 1 param > () not required
+  let cubeArrow = x => x * x * x
+  console.log("=> func:", cubeArrow(5))
+
+  let cubeArrow2 = x => {
+    return x * x * x
+  }
+  console.log("2nd ver => func:", cubeArrow2(5))
+}
