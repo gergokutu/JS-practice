@@ -45,6 +45,8 @@ Arrow functions
   // create an object literal
   // and invoke them as a method
   let functions = {
+    // to check the this in the time of object literal creation
+    this: this,
     arrow: arrow,
     normal: normal,
     // "this" with Arrow Methods and Object Literals
