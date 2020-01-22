@@ -28,3 +28,28 @@ Arrow functions
   }
   console.log("2nd ver => func:", cubeArrow2(5))
 }
+
+// this inside arrow function
+// does not matter how you call the arrow func > value of this is the same
+// value of this is only determined by the creation of the arrow func
+{
+  let arrow = () => this
+
+  function normal() {
+    return this
+  }
+
+  console.log("Arrow this:", arrow()) // window
+  console.log("Normal this:", normal()) // window
+
+  // check them inside an object
+  // and invoke them as a method
+  let functions = {
+    arrow: arrow,
+    normal: normal
+  }
+
+  console.log(functions)
+  console.log("arrow:", functions.arrow()) // window
+  console.log("normal:", functions.normal()) // refers to the functions object itself
+}
