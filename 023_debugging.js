@@ -27,4 +27,11 @@
   }
 
   console.log(factorial(5))
+
+  // Event Listener Breakpoints > google chrome devtools
+// events > drag, clicks, etc...
+// 
+
+  document.getElementById("only").onclick = () => console.log("Clicked")
 }
+
