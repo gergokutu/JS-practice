@@ -28,10 +28,15 @@
 
   console.log(factorial(5))
 
+  // create a click event
+  document.getElementById("only").onclick = () => console.log("Clicked")
+
   // Event Listener Breakpoints > google chrome devtools
   // events > drag, clicks, etc...
-  // 
+  // inspect > source > Event listener breakpoints > Mouse...
+  // when you clicks > the debugging stops
 
-  document.getElementById("only").onclick = () => console.log("Clicked")
+  // create a click event
+  document.getElementById("only").onmouseover = () => console.log("Hover over")
 }
 
