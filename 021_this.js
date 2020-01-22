@@ -1,6 +1,6 @@
 /*
 "THIS"
-- function context
+- function context is another word for 'this'
 - arguments passed to the function > 
 - inside the function definition we call them parameters
 - explicit vs implicit arguments (e.g this)
@@ -80,24 +80,49 @@ let me = {
 
 // call and apply methods
 // useful with this > modifies the value of this
+// modifies the value right when calling the function
 {
   function doStuff(input, input2) {
     console.log(input, input2)
     console.log(this)
   }
 
-  console.log(5)
-  console.log(this)
+  console.log("Simple doStuff:")
+  doStuff(5)
 
   // change the value of this
   // (valut to change, argument(s) (input) value we want to pass)
+  console.log("Call method:")
   doStuff.call("hello", 5)
   doStuff.call("hello", 5, 10)
   console.log(this)
 
   // apply method is similar
   // but put the passed arguments in an array
+  console.log("Apply method:")
   let args = [5, 10]
   doStuff.apply("hello", args)
   // doStuff.apply("hello", [5, 10])
+}
+
+// bind
+// also changes the value of this
+// but works in a different way than apply/call
+// bind gives you a new function where the value of this is PERMANENTLY changed
+{
+  function doStuff(input, input2) {
+    console.log(input, input2)
+    console.log(this)
+  }
+
+  // invoke like the call method
+  // nothings shows up
+  // because it does not calls the function
+  // but creates a new function
+  console.log("Bind method:")
+  doStuff.bind("hello", 5, 10)
+  // we have to assign it to a variable
+  let me = { name: "Pocok" }
+  let newFunction = doStuff.bind(me, 5, 10)
+  newFunction()
 }
