@@ -15,9 +15,27 @@ function x(a, b) {
 }
 
 let me = {
-  name: "Pocok"
+  name: "Pocok",
   test: function() {
     console.log (this.name) // refers.to me.name ("Pocok")...
   }
 }
 */
+
+{
+  let me = {
+    name: "Pocok",
+    outPutMe: function() {
+      console.log ("Entire object:", this)
+    },
+    outPutName: function() {
+      console.log ("Name:", this.name)
+    }
+  }
+
+  // get the object itself
+  // outPutMe method
+  me.outPutMe()
+  // get the name
+  me.outPutName()
+}
