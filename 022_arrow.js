@@ -42,14 +42,22 @@ Arrow functions
   console.log("Arrow this:", arrow()) // window
   console.log("Normal this:", normal()) // window
 
-  // check them inside an object
+  // create an object literal
   // and invoke them as a method
   let functions = {
     arrow: arrow,
-    normal: normal
+    normal: normal,
+    // "this" with Arrow Methods and Object Literals
+    // create an arrow function inside of an object
+    arrowTest: () => this
   }
 
   console.log(functions)
-  console.log("arrow:", functions.arrow()) // window
-  console.log("normal:", functions.normal()) // refers to the functions object itself
+  // window again
+  console.log("arrow:", functions.arrow())
+  // refers to the functions object itself 
+  console.log("normal:", functions.normal())
+  // window again > when the object literal is created >
+  // this still refers to the window object
+  console.log("arrow method:", functions.arrowTest()) 
 }
