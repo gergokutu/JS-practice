@@ -77,3 +77,27 @@ let me = {
 
   let person1 = new Person()
 }
+
+// call and apply methods
+// useful with this > modifies the value of this
+{
+  function doStuff(input, input2) {
+    console.log(input, input2)
+    console.log(this)
+  }
+
+  console.log(5)
+  console.log(this)
+
+  // change the value of this
+  // (valut to change, argument(s) (input) value we want to pass)
+  doStuff.call("hello", 5)
+  doStuff.call("hello", 5, 10)
+  console.log(this)
+
+  // apply method is similar
+  // but put the passed arguments in an array
+  let args = [5, 10]
+  doStuff.apply("hello", args)
+  // doStuff.apply("hello", [5, 10])
+}
