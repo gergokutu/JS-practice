@@ -63,3 +63,21 @@ Arrow functions
   // this still refers to the window object
   console.log("arrow method:", functions.arrowTest()) 
 }
+
+// bind with arrow function
+{
+  console.log("Bind + arrow part:")
+  let arrow = () => this
+  console.log(arrow())
+
+  // bind won't work
+  // you cannot change the value of this for arrow functions
+  let newFunc = arrow.bind("Hello")
+  console.log("newFunc:", newFunc())
+
+  // if you want to change it > use normal func instead of arrow...
+  function normal() {
+    return this
+  }
+  console.log(normal.bind("helloooo")())
+}
