@@ -23,6 +23,7 @@ let me = {
 */
 
 {
+  // other programming languages the next is the only usage of this
   let me = {
     name: "Pocok",
     outPutMe: function() {
@@ -38,4 +39,41 @@ let me = {
   me.outPutMe()
   // get the name
   me.outPutName()
+
+  // same result but create the function outside of the object
+  // but it's still attached to the object as a method
+  let otherPerson = {
+    name: "Kutu",
+    outPutMe: outPutMe
+  }
+
+  function outPutMe() {
+    console.log (this)
+  }
+
+  otherPerson.outPutMe()
+
+  // invoke it as a function
+  // it's gonna be the window global object
+  outPutMe()
+
+  // call it as a function using strict mode
+  // gonna be undefined
+  function outPutMeStrict() {
+    'use strict'
+    console.log (this)
+  }
+
+  outPutMeStrict()
+
+  // call a function as a contstructor
+  // empty object > refers to the new object (instance)
+  // created by the Person constructor
+  function Person() {
+    console.log("1st:", this)
+    this.name = "Pocok"
+    console.log("2nd:", this)
+  }
+
+  let person1 = new Person()
 }
