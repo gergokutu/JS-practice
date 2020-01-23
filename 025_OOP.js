@@ -77,3 +77,38 @@ Object Oriented Javascript
   console.log(person2)
   console.log(person3)
 }
+
+// Creating Prototype Methods for Constructor Functions
+{
+  function User(name, interests) {
+    this.name = name
+    this.interests = interests
+    // every time we creating a user
+    // we copy this method
+    // memory wasting
+    // put it on the parent object instead
+    this.outputStuff = function() {
+      console.log(`My name is ${this.name}, I like ${this.interests}.`)
+    }
+  }
+
+  // how to put the method on the parent object
+  // arrow func does not work... but why?
+  // me.greet() shows really strange result
+  // User.prototype.greet = () => console.log(`My name is ${this.name}, I like ${this.interests}.`)
+  // with normal func it's okay
+  User.prototype.greet = function() {
+    console.log(`My name is ${this.name}, I like ${this.interests}.`)
+  }
+
+  let me = new User("Pocok", ["coding", "diving", "travelling"])
+  let person1 = new User("Mogyi", ["diving", "travelling", "detective stories"])
+  let person2 = new User("Z", ["Z"])
+  console.log(me)
+  console.log(person1)
+  console.log(person2)
+
+  me.outputStuff()
+  me.greet()
+  person1.greet()
+}
