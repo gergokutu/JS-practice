@@ -27,3 +27,23 @@ let me = new Object()...
 - so Object.getPrototypeOf(me) equals to Object.prototype
 - we can do this with our own constructors
 */
+
+// setting and object prototype with setPrototypeOf
+{
+  let user = {
+    active: true
+  }
+
+  let teacher = {
+    teaching: ["math", "science"]
+  }
+
+  // console.log(teacher)
+
+  // set proto from user to techer
+  // check __proto__
+  Object.setPrototypeOf(teacher, user)
+  console.log(teacher)
+  console.log(teacher.active)
+
+}
