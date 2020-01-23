@@ -12,5 +12,18 @@ Prototype inheritance
 - Object.prototype
 
 Prototypes and Constructors
-- 
+- object literal is basically the same than object constructor
+- object literal:
+
+let me = {
+  name: "Pocok"
+}
+
+- object constructor:
+
+let me = new Object()...
+
+- Object prototype is transferred to the new object > prototype chain (prototype hierarchy)
+- so Object.getPrototypeOf(me) equals to Object.prototype
+- we can do this with our own constructors
 */
