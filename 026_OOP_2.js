@@ -84,3 +84,33 @@ let me = new Object()...
   console.log("teacher.tacos:", teacher.tacos)
 }
 
+// instance properties vs object properties
+// when to use which
+{
+  // sayHello method is general > put it here
+  console.log("------INSTANCE vs OBJECT PROPS------")
+  let user = {
+    active: true,
+    sayHello: function() {
+      return `${this.name} says hi!`
+    }
+  }
+
+  let student = {
+    // name is individual > put it here
+    name: "Pupil",
+    major: "English"
+  }
+
+  let teacher = {
+    name: "Master",
+    teaching: ["math", "science"]
+  }
+
+  Object.setPrototypeOf(teacher, user)
+  Object.setPrototypeOf(student, user)
+
+  student.active = false
+  console.log("student:", student.sayHello())
+  console.log("teacher:", teacher.sayHello())
+}
