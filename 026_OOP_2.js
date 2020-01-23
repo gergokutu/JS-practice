@@ -45,5 +45,42 @@ let me = new Object()...
   Object.setPrototypeOf(teacher, user)
   console.log(teacher)
   console.log(teacher.active)
-
 }
+
+// override prototypal inheritance
+// how to overwrite a particular value
+// in the prototype of an object
+{
+  let user = {
+    active: true
+  }
+
+  let student = {
+    major: "English"
+  }
+
+  let teacher = {
+    teaching: ["math", "science"]
+  }
+
+  Object.setPrototypeOf(teacher, user)
+  Object.setPrototypeOf(student, user)
+
+  // overwrite a value (set a value)
+  // JS looks for active on the student first >
+  // if it does not exist > create it
+  // active gonna be directly on the student
+  // which overrides the prototypal active: true
+  // check in the console with/without the next line
+  student.active = false
+  console.log("student:", student.active)
+  console.log("teacher:", teacher.active)
+  console.log("student:", student)
+  console.log("teacher:", teacher)
+  
+  // when asking for a value (e.g. teacher.tacos) >
+  // JS goes through the prototype chain
+  // if no match > the value gonna be undefined
+  console.log("teacher.tacos:", teacher.tacos)
+}
+
