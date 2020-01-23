@@ -49,3 +49,31 @@ Object Oriented Javascript
 
   person3.print()
 }
+
+// creating a Factory Function
+// similar to ctor
+// but has return value
+// do not prefix it with the new keyword
+// constructor is the recommended
+{
+  function User(name, interests) {
+    let person = {
+      name: name,
+      interests: interests
+    }
+
+    return person
+  }
+
+  let me = User("Pocok", ["cooking", "diving", "travelling", "coding", "music", "snowboarding"])
+  // add new property
+  me.membership = "Gold"
+  console.log(me)
+
+  let person1 = User("Mogyi", ["diving", "travelling", "detective stories", "politics"])
+  let person2 = User("Pista", ["gardening"])
+  let person3 = User("Mariska", ["knitting"])
+  console.log(person1)
+  console.log(person2)
+  console.log(person3)
+}
