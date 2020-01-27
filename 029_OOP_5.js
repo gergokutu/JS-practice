@@ -44,4 +44,25 @@
   // "active" property on user > false
   // "name" property on teacher > true
   console.log("hasOwnProperty:", teacher.hasOwnProperty("name"))
+
+  // list the properties of an object
+  // with prototypes too
+  let properties = [];
+
+  for (let prop in teacher) {
+    properties.push(prop)
+  }
+
+  console.log("props of teacher:", properties)
+
+  // list only the own properties
+  let properties2 = []
+
+  for (let prop in teacher) {
+    if (teacher.hasOwnProperty(prop)) {
+      properties2.push(prop)
+    }
+  }
+
+  console.log('own props of teacher:', properties2)
 }
