@@ -125,6 +125,8 @@
   
   teacher3 instanceof StudentCtor ? console.log("Yep") : console.log("Nope")
 
+  // if the type matches to UserCtor > return 5
+  // if not > return -1
   function doSomething(user) {
     if (user instanceof UserCtor) {
       return 5
