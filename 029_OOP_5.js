@@ -95,8 +95,8 @@
   let student2 = new StudentCtor("Pupil", "English")
   let teacher2 = new TeacherCtor("Master", ["math", "science"])
 
-  console.log("student with ctor:", student2)
-  console.log("teacher with ctor", teacher2)
+  console.log("student2 with ctor:", student2)
+  console.log("teacher2 with ctor", teacher2)
 
   // Setting Prototypes with Constructors
   // set up an inheritance hierarchy
@@ -111,7 +111,28 @@
   let student3 = new StudentCtor("Pupil", "English")
   let teacher3 = new TeacherCtor("Master", ["math", "science"])
 
-  console.log("student with ctor + prototype chain:", student3)
-  console.log("teacher with ctor + prototype chain", teacher3)
+  console.log("student3 with ctor + prototype chain:", student3)
+  console.log("teacher3 with ctor + prototype chain", teacher3)
   console.log("sayHello on prototype", teacher3.sayHello())
+
+  // instanceof Operator
+  // see if an object has a particular type
+  console.log("-----instanceof Operator-----")
+
+  console.log(teacher3 instanceof TeacherCtor)
+  console.log(teacher3 instanceof UserCtor)
+  console.log(teacher3 instanceof StudentCtor)
+  
+  teacher3 instanceof StudentCtor ? console.log("Yep") : console.log("Nope")
+
+  function doSomething(user) {
+    if (user instanceof UserCtor) {
+      return 5
+    } else {
+      return -1
+    }
+  }
+
+  console.log(doSomething(teacher3))
+  console.log(doSomething(teacher))
 }
