@@ -65,4 +65,36 @@
   }
 
   console.log('own props of teacher:', properties2)
+
+  // converting object literals to constructors
+  // constructor is a much more scalable option
+  // this case > you're not gonna see anything but Object as a prototype 
+  // because there is no prototype chain
+  console.log("-----converting object literals to constructors-----")
+
+  // create the constructors (ctor)
+  function UserCtor() {
+    this.active = false
+  }
+
+  UserCtor.prototype.sayHello = function() {
+    return this.name + "says hi!"
+  }
+
+  function StudentCtor(name, major) {
+    this.name = name
+    this.major = major
+  }
+
+  function TeacherCtor(name, teaching) {
+    this.name = name
+    this.teaching = teaching
+  }
+
+  // instantiate an object of them
+  let student2 = new StudentCtor("Pupil", "English")
+  let teacher2 = new TeacherCtor("Master", ["math", "science"])
+
+  console.log("student with ctor:", student2)
+  console.log("teacher with ctor", teacher2)
 }
