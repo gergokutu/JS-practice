@@ -1,0 +1,20 @@
+* {
+  background-color: red;
+}
+
+p, span {
+  background-color: aqua !important;
+}
+
+/* no effect because of !important */
+p {
+  background-color: black;
+}
+
+#list {
+  font-weight: bold;
+}
+
+.list-member {
+  list-style: lower-greek;
+}
