@@ -68,7 +68,7 @@
 
   // converting object literals to constructors
   // constructor is a much more scalable option
-  // this case > you're not gonna see anything but Object as a prototype 
+  // this case > you're not gonna see anything about the user
   // because there is no prototype chain
   console.log("-----converting object literals to constructors-----")
 
