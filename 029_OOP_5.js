@@ -104,10 +104,14 @@
 
   StudentCtor.prototype = new UserCtor()
   TeacherCtor.prototype = new UserCtor()
+  TeacherCtor.prototype.sayHello = function() {
+    return "Teacher says hi!"
+  }
 
   let student3 = new StudentCtor("Pupil", "English")
   let teacher3 = new TeacherCtor("Master", ["math", "science"])
 
   console.log("student with ctor + prototype chain:", student3)
   console.log("teacher with ctor + prototype chain", teacher3)
+  console.log("sayHello on prototype", teacher3.sayHello())
 }
