@@ -97,4 +97,17 @@
 
   console.log("student with ctor:", student2)
   console.log("teacher with ctor", teacher2)
+
+  // Setting Prototypes with Constructors
+  // set up an inheritance hierarchy
+  console.log("-----Setting Prototypes with Constructors-----")
+
+  StudentCtor.prototype = new UserCtor()
+  TeacherCtor.prototype = new UserCtor()
+
+  let student3 = new StudentCtor("Pupil", "English")
+  let teacher3 = new TeacherCtor("Master", ["math", "science"])
+
+  console.log("student with ctor + prototype chain:", student3)
+  console.log("teacher with ctor + prototype chain", teacher3)
 }
