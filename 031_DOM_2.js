@@ -50,3 +50,31 @@ document.getElementById("input").value = "!!! instead of stuff"
 console.log(document.getElementById("input").hasAttribute("tacos"))
 console.log(document.getElementById("input").getAttribute("tacos"))
 console.log("attributes of input:", document.getElementById("input").attributes)
+
+// Dynamically adding nodes
+console.log("-----Adding Nodes-----")
+
+// add something to the list by clicking the button
+const addButton = document.getElementById("add-button")
+addButton.onclick = function () {
+  // create the element
+  const node = document.createElement("li")
+
+  // needs a text node
+  node.appendChild(document.createTextNode(
+    // take the input box value as text
+    document.getElementById("input").value
+  ))
+
+  // make it show up on the page
+  ourList.appendChild(node)
+}
+
+// remove the last list item
+console.log(ourList.children)
+const removeButton = document.getElementById("remove-button")
+removeButton.onclick = () => {
+  // ourList.removeChild(ourList.children[ourList.children.length - 1])
+  // more simple with lastChild
+  ourList.removeChild(ourList.lastChild)
+}
