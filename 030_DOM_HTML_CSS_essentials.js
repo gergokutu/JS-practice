@@ -67,7 +67,9 @@ DOM - Document Object Model
   // element node has a nodeType
   console.log("nodeType:", sauce.nodeType)
   console.log("nodeName:", sauce.nodeName)
-  console.log("nodeValue:", sauce.nodeValue) // null
+  // null
+  // you cannot change the nodeValue of element nodes
+  console.log("nodeValue:", sauce.nodeValue) 
   // element node has a nodeType
   // sauce is a element node
   // and has a text node child
@@ -87,5 +89,16 @@ DOM - Document Object Model
   console.log("nodeName:", paragraphs[0].childNodes[0].nodeName)
   console.log("nodeValue:", paragraphs[0].childNodes[0].nodeValue)
   console.log("nodeType:", paragraphs[0].childNodes[0].nodeType)
+
+  // Modifying nodeValue
+  console.log("-----MODIFYING nodeValue-----")
+
+  let span = paragraphs[0].childNodes[1]
+  console.log(span)
+
+  // you can change the nodeValue of a text node
+  // try with the next line!!!
+  // console!!! > changed node value
+  // span.childNodes[0].nodeValue = "changed node value"
 }
 
