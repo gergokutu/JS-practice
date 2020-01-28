@@ -27,5 +27,6 @@ ourList.onmouseover = () => {
   console.log("mouse over")
   ourList.childNodes[1].childNodes[0].nodeValue = "Love Pasta"
   ourList.childNodes[3].childNodes[0].nodeValue = "Love Sauce"
-  ourList.childNodes[5].childNodes[0].nodeValue = "Love Cheese"
+  // ourList.childNodes[5].childNodes[0].nodeValue = "Love Cheese"
+  document.getElementById("cheese").innerText = "Love Cheese"
 }
