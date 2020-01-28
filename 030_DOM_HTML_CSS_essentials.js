@@ -59,5 +59,20 @@ DOM - Document Object Model
   // by class name
   const shortList = document.getElementsByClassName("list-member")
   console.log(shortList)
+
+  // Node names and types
+  // check MDN
+  // Element nodes (value: 1), text nodes (value: 3)
+  console.log("-----NODE NAMES/TYPES-----")
+  // element node has a nodeType
+  console.log("nodeType:", sauce.nodeType)
+  // element node has a nodeType
+  // sauce is a element node
+  // and has a text node child
+  // which has the value > "Sauce"
+  console.log("nodeValue:", sauce.childNodes[0].nodeValue)
+
+  if (sauce.nodeType === 1) console.log("element")
+  if (sauce.childNodes[0].nodeType === 3) console.log("text")
 }
 
