@@ -48,5 +48,16 @@ DOM - Document Object Model
   console.log("next sibling:", sauce.nextSibling.nextSibling)
   // to skip the text node > double .previousSibling
   console.log("prev sibling:", sauce.previousSibling.previousSibling)
+
+  // getElementsByTagName and getElelementsByClassName
+  console.log("-----NEXT SESSION-----")
+
+  // by tag name
+  const list2 = document.getElementsByTagName("li")
+  console.log(list2)
+
+  // by class name
+  const shortList = document.getElementsByClassName("list-member")
+  console.log(shortList)
 }
 
