@@ -41,3 +41,12 @@ ourList.onmouseleave = () => {
   // or erase the list
   // ourList.remove()
 }
+
+// working with attributes in the DOM
+// check the input node attributes in DOM structure
+console.log(document.childNodes)
+document.getElementById("input").value = "!!! instead of stuff"
+
+console.log(document.getElementById("input").hasAttribute("tacos"))
+console.log(document.getElementById("input").getAttribute("tacos"))
+console.log("attributes of input:", document.getElementById("input").attributes)
