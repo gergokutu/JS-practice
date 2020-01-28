@@ -37,4 +37,7 @@ ourList.onmouseleave = () => {
   ourList.childNodes[3].childNodes[0].nodeValue = "Sauce"
   // ourList.childNodes[5].childNodes[0].nodeValue = "Love Cheese"
   document.getElementById("cheese").innerText = "Cheese"
+
+  // or erase the list
+  // ourList.remove()
 }
