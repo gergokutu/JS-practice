@@ -23,10 +23,18 @@ console.log(list)
 let ourList = list[0]
 console.log(ourList)
 
-ourList.onmouseover = () => {
-  console.log("mouse over")
+ourList.onmouseenter = () => {
+  console.log("mouse enter")
   ourList.childNodes[1].childNodes[0].nodeValue = "Love Pasta"
   ourList.childNodes[3].childNodes[0].nodeValue = "Love Sauce"
   // ourList.childNodes[5].childNodes[0].nodeValue = "Love Cheese"
   document.getElementById("cheese").innerText = "Love Cheese"
+}
+
+ourList.onmouseleave = () => {
+  console.log("mouse leave")
+  ourList.childNodes[1].childNodes[0].nodeValue = "Pasta"
+  ourList.childNodes[3].childNodes[0].nodeValue = "Sauce"
+  // ourList.childNodes[5].childNodes[0].nodeValue = "Love Cheese"
+  document.getElementById("cheese").innerText = "Cheese"
 }
