@@ -74,5 +74,7 @@ DOM - Document Object Model
 
   if (sauce.nodeType === 1) console.log("element")
   if (sauce.childNodes[0].nodeType === 3) console.log("text")
+
+  console.log("nodeName:", sauce.childNodes[0].nodeName)
 }
 
