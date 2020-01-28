@@ -66,6 +66,8 @@ DOM - Document Object Model
   console.log("-----NODE NAMES/TYPES-----")
   // element node has a nodeType
   console.log("nodeType:", sauce.nodeType)
+  console.log("nodeName:", sauce.nodeName)
+  console.log("nodeValue:", sauce.nodeValue) // null
   // element node has a nodeType
   // sauce is a element node
   // and has a text node child
@@ -76,5 +78,14 @@ DOM - Document Object Model
   if (sauce.childNodes[0].nodeType === 3) console.log("text")
 
   console.log("nodeName:", sauce.childNodes[0].nodeName)
+
+  // Text Node childNodes
+  console.log("-----TEXT NODES-----")
+
+  let paragraphs = document.getElementsByTagName("p")
+  console.log("p:", paragraphs)
+  console.log("nodeName:", paragraphs[0].childNodes[0].nodeName)
+  console.log("nodeValue:", paragraphs[0].childNodes[0].nodeValue)
+  console.log("nodeType:", paragraphs[0].childNodes[0].nodeType)
 }
 
