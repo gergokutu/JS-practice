@@ -1,7 +1,7 @@
 // functions are objects as well in JS
 {
   let position = {
-    // propertirs
+    // properties
     x: 10,
     y: 20,
     // methods

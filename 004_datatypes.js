@@ -43,7 +43,9 @@ console.log(grades[index])
   let yourName = new String("Mogyi")
   console.log(typeof(myName)) // string
   console.log(typeof(yourName)) // object
-  console.log(yourName) // String {"Mogyi"} > 0: "M", 1: "o", ... length: 5
+  // String {"Mogyi"}
+  // in browser console you can see > 0: "M", 1: "o", ... length: 5
+  console.log(yourName) 
   
   // convert back to primitive
   yourName = yourName.valueOf();

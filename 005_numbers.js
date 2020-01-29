@@ -55,7 +55,7 @@
   console.log("newPizza1:", newPizza2)
 
   // same with slicesOfPizza-- vs --slicesOfPizza
-  // better to design your code with the prefix way (slicesOfPizza++)
+  // better to design your code with the postfix way (slicesOfPizza++)
   
 }
 
@@ -93,7 +93,7 @@
   console.log("Octal:", Number.parseInt(input, 8))
   console.log("Hexadecimal:", Number.parseInt(input, 16))
 
-  // toString(radix)
+  // toString(radix) > transform it
   console.log("Decimal", input + " to decimal:", input)
   console.log("Decimal", input + " to binary:", input.toString(2))
   console.log("Decimal", input + " to octal:", input.toString(8))

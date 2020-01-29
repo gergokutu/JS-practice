@@ -18,7 +18,7 @@ console.log(age)
 console.log(age)
 console.log(age)
 
-// copies the variable int a new
+// copies the variable into a new
 var newAge = age
 
 // expressions

@@ -126,7 +126,7 @@ for (let i = 0; i < 10; i++) {
     for (let k = i; k >= 0; k--) {
       destination.append(k + space)
     }
-    // create a break
+    // create a break > new line
     const br = document.createElement("br")
     destination.appendChild(br)
   }
@@ -136,13 +136,14 @@ for (let i = 0; i < 10; i++) {
 {
   let destination2 = document.getElementById("destination2")
   const level = 10
-  const space = '_'
+  const underscore = '_'
   const hash = '#'
+  const star = '*'
 
   for (let i = 0; i < level; i++) {
     for (let j = level - i - 1; j > 0; j--) {
       destination2.style.color = "blue"
-      destination2.append(space)
+      destination2.append(underscore)
     }
 
     for (let k = i; k >= 0; k--) {
@@ -150,7 +151,7 @@ for (let i = 0; i < 10; i++) {
     }
     
     for (let k = i - 1; k >= 0; k--) {
-      destination2.append(hash)
+      destination2.append(star)
     }
     // create a break
     const br = document.createElement("br")

@@ -6,9 +6,9 @@
   grades.push(4)
   console.log(grades)
 
-  // pop of the last element
-  const poppedOf = grades.pop()
-  console.log(poppedOf)
+  // pop off the last element
+  const poppedOff = grades.pop()
+  console.log("Popped off:", poppedOff)
   console.log(grades)
 
   // shift (remove) & unshift (add)
@@ -37,6 +37,7 @@
 }
 
 {
+  console.log("-----NEW SECTION-----")
   let grades = [1, 2, 3, 4, 5, 6, 7]
   grades.push(8, 9, 0, 11, 11, 2, 345)
 
@@ -69,14 +70,14 @@
   correctSortAscending_3(grades)
   console.log("Ascending_3 sort:", grades)
 
-  // correction ascending
+  // correction descending
   const correctSortDescending = grades.sort((a, b) => b - a)
   console.log("Descending sort:", correctSortDescending)
 
   // reverse method
   // also alters the original array
   grades.reverse()
-  console.log(grades)
+  console.log("Reverse:", grades)
 
   // fill a section of the array with a particular value
   // value, start index (inclusive), stop index (exclusive)
@@ -90,6 +91,7 @@
 }
 
 {
+  console.log("-----NEW SECTION-----")
   let gradesA = [20, 22, 39]
   let gradesB = [1, 2, 3]
 
@@ -98,10 +100,10 @@
   // similar to push but !!! push changes the original array
   // !!! and returns the length 
   const newGrades = gradesA.concat(gradesB)
-  console.log(newGrades)
+  console.log("concat:", newGrades)
 
   // + > returns a string with arrays
-  console.log(gradesA + gradesB)
+  console.log("+:", gradesA + gradesB)
 
   // test the push return value
   const test = newGrades.push(12, 13, 15)
@@ -112,7 +114,8 @@
   console.log(gradesA.includes(20)) // true
   console.log(gradesB.includes(20)) // false
 
-  // indexOf > index of the element / -1
+  // indexOf > index of the element
+  // -1 > false
   console.log(gradesA.indexOf(39))
   console.log(gradesB.indexOf(39))
 
@@ -128,6 +131,6 @@
   // slice
   // start, end (exclusive)
   const sliced = newGrades.slice(3, 6)
-  console.log(newGrades)
-  console.log(sliced)
+  console.log("newGrades:", newGrades)
+  console.log("sliced:", sliced)
 }

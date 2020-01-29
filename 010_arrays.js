@@ -19,7 +19,7 @@ ages.length = 30
 ages[100] = "hey"
 
 Multidimensional arrays:
-- arrays inside of arrays (nestes arrays)
+- arrays inside of arrays (nested arrays)
 
 let stuff = [12, "hey", function(){console.log("hoooo")}, ["nested", "array"]]
 let grades = [
@@ -28,7 +28,7 @@ let grades = [
   [4, 4, 5]
 ]
 grades[1] // [3, 4, 5]
-grades[1][2] // 4
+grades[1][2] // 5
 */
 
 {
@@ -55,7 +55,7 @@ grades[1][2] // 4
     console.log(grades[i])
   }
 
-  // the array can crop the length
+  // you can crop the length of the array too
   grades.length = 2
   for (let i = 0; i < grades.length; i++) {
     console.log(grades[i])
@@ -63,6 +63,7 @@ grades[1][2] // 4
 }
 
 {
+  console.log("-----NEW SECTION-----")
   let grades = [15, 4, 4, 66, 7, 9, 33, 4, 6, 43, 43]
   grades.length = 30
   grades[34] = 40
@@ -89,7 +90,7 @@ grades[1][2] // 4
 
   // use the flag
   if (found) {
-    // do something
+    console.log("Yes, we have found it.")
   }
 
   // find the biggest element in the array
@@ -99,6 +100,7 @@ grades[1][2] // 4
   let largest = grades[0]
 
   for (let i = 0; i < grades.length; i++) {
+    // if (grades[i] > largest) largest = grades[i]
     if (grades[i] > largest) largest = grades[i]
   }
 
@@ -110,12 +112,12 @@ grades[1][2] // 4
 
   // or > sort()
   // if there is empty values >
-  // at the and you find in this case undefined
+  // the result gonna be > undefined
   // so reassign the array
   grades = [15, 4, 4, 66, 7, 9, 33, 4, 6, 43, 43]
-  console.log("3 Largest is", grades.sort((a,b) => a-b)[grades.length - 1])
+  console.log("3 Largest is", grades.sort((a, b) => a - b)[grades.length - 1])
   // reverse()
-  console.log("4 Largest is", grades.sort((a,b) => a-b).reverse()[0])
+  console.log("4 Largest is", grades.sort((a, b) => a - b).reverse()[0])
 
   // or > Math.max
   console.log("5 Largest is", Math.max(...grades))
@@ -127,7 +129,7 @@ grades[1][2] // 4
   largest = grades.reduce((a, b) => a > b ? a : b)
   console.log("7 Largest is", largest)
 
-  // or > reduce + ternary
+  // or > reduce + Math.max
   largest = grades.reduce((a, b) => Math.max(a, b))
   console.log("8 Largest is", largest)
 }
@@ -139,7 +141,7 @@ grades[1][2] // 4
 
   // find the average
   // be careful with the gaps
-  // we have to know the lenght but cannot use the method because of gaps
+  // we have to know the lenght but cannot use the length method because of gaps
   let count = 0;
   let total = 0;
 
@@ -203,6 +205,6 @@ grades[1][2] // 4
     // grades.push(parseInt(input))
     grades.push(Number(input))
 
-    console.log(grades)
+    console.log("User input:", grades)
   }
 }

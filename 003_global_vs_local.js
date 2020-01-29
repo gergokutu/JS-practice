@@ -8,7 +8,7 @@
   // age just accessible inside the function
   // not for window object
   var age = 5
-  console.log(age)
+  console.log("IIFE - age:", age)
 })()
 
 // the engine takes our code and executes it
@@ -17,7 +17,7 @@
 // browser is the runtime environment
 // JS engine is part of the browser
 // node.js > environment for back-end JS codes
-// JS > JIT compilation (JS engine compiles executable...)
+// JS > JIT compilation (JS engine compiles executables...)
 // truth > up to the engine if JS is compiled or interpreted
 // it's an implementation detail..
 
@@ -32,8 +32,8 @@
 // it can be overwritten accidentally...
 var y = 10
 
-// similar to var
-// not stored on window
+// let is similar to var
+// not stored on window object
 // but in a declarative environment
 // check in the console > window.z > undefined
 // accessible globally

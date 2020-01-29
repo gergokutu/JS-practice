@@ -31,7 +31,7 @@ And the new line is totally ok!!! ;)`)
   // do it in a new variable
   console.log(favFood.concat(" is supercool", "! ", "But", " ", "pizza as well!"))
 
-  // Finding a string in anouther string
+  // Finding a string in another string
   let search1 = "age"
   let search2 = "word"
   console.log(favFood.includes(search1)) // true
@@ -78,7 +78,8 @@ And the new line is totally ok!!! ;)`)
 
   // trim any kind of white space before and after
   // useful for form validation
-  let content2 = " \tToday we'll be talking about string methods and how fun they are\n\t"
+  let content2 = " \tToday we'll be talking about\t string methods and how fun they are\n\t"
+  console.log(content2)
   console.log(content2.trim())
   console.log(content2.trimLeft())
   console.log(content2.trimRight())

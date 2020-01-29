@@ -1,8 +1,8 @@
-// labels with break ans continue
+// labels with break and continue
 // labels >
 // allows you to mark an outer for loop
-// and the let you go there
-// when breaks out / continue from an inner loop
+// and then let you go there
+// when using break / continue keywords
 {
   let grades = [
     [0],
@@ -30,9 +30,10 @@
         }
         // 3 "Do stuff" after 9
         // becuse it's done for the undefined as well
-        console.log("Do stuff")
-        // // only 1 "Do stuff" after 9
+        // not in the scope of the if statement on line 23...
+        // or only 1 "Do stuff" after 9
         // if (grades[i][j] !== undefined) console.log("Do stuff")
+        console.log("Do stuff")
       }
       console.log("****************************")
     }
@@ -59,7 +60,7 @@
   // apply labels!
   // we can reference outerLoop
   // to jump there instead of the next inner loop
-  // !continue with the next outerLoop
+  // continue with the next outerLoop!
   outerLoop: for (let i = 0; i < grades.length; i++) {
     if (grades[i] !== undefined) {
       console.log("----------New row-----------")
@@ -85,7 +86,7 @@
   }
 
   // jump out from both loops
-  // !break out from the outerLoop
+  // break out from the outerLoop!
   outerLoop: for (let i = 0; i < grades.length; i++) {
     if (grades[i] !== undefined) {
       console.log("----------New row-----------")
