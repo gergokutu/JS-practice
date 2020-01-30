@@ -17,6 +17,7 @@ let variable2 = 6
 name(variable1, variable2) // 30
 
 - variable1 in function call is differ from variable1 in function declaration
+- value is being copied...
 - name() > undefined
 - name(5, 6, 7, "hello") > 7, "hello" gonna be ignored
 
@@ -27,22 +28,21 @@ name(variable1, variable2) // 30
   - functions can be stored in arrays
   - functions can be assigned to object properties (methodes)
   - functions can be assigned to the properties of functions
-  - we can pass functions to other other functions (callback)
+  - we can pass functions to other functions (callback)
   - objects can be returned from functions > so functions can be returned from functions
-  - so functions can be inout and output
+  - so functions can be input and output
   - bind, this...
   - passing arguments by value, passing arguments by reference...
 
   Passing arguments:
-  - passed by value > the value of the argument is copied the parameter
-  - changes to variable inside the function does not persist outside of the function
+  - passed by value > the value of the argument is copied into the parameter
+  - changes made to variable inside the function does not persist outside of the function
   - e.g. variable1 stays 5 (in case of primitives)
-  - in case of complex types (objects)
+  - in case of complex types (objects) > passed by reference
     - assign an object to a variable > stores a reference to that object (where it is stored in the memory)
     - the passed argument and the parameter references (points) to the same object
     - changes in the function affects the object outside of the function!!!
-    - passing by reference
-    - exeption > new object cannot be created this way
+    - exception > new object cannot be created this way
       - it will live only inside the function scope
 */
 
@@ -68,7 +68,7 @@ name(variable1, variable2) // 30
 /*
 Callbacks
 - pass a function as an argument to another function
-- and that function invokes the passed functioon
+- and that function invokes the passed function
 - higher order functions > the function that accepts another function
 */
 
@@ -150,7 +150,7 @@ Callbacks
   console.log("Pow func => :", pow3(2, 3));
 
   // IIFE
-  // beacuse of IIFE default value needed
+  // because of IIFE default value needed
    (function(base = 2, pow = 3) {
     let total = 1;
     for (let i = 0; i < pow; i++) {

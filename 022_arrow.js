@@ -7,7 +7,7 @@ Arrow functions
 }
 - let d = x => x + x
 - etc.
-- there are couple of variotons for the synthax (one line, with args...)
+- there are couple of variations for the synthax (one line, with args...)
 - the value of "this" always gonna be the same
   - value determined by => where the function is created
   - and not how it's called...
@@ -79,5 +79,5 @@ Arrow functions
   function normal() {
     return this
   }
-  console.log(normal.bind("helloooo")())
+  console.log("normal func + bind", normal.bind("helloooo")())
 }

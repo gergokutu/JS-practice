@@ -26,7 +26,7 @@ Polymorphism
     teaching: ["math", "science"],
     sayHello: function() {
       let message = this.name + " teaches "
-      this.teaching.forEach(e => message += e + " ")
+      this.teaching.forEach(element => message += element + " ")
       return message
     }
   }

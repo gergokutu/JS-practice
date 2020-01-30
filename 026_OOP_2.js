@@ -2,7 +2,7 @@
 Prototype inheritance
 - allows an object to take parts from another one
 - inherit thet parts as its own
-- in JS it'S done by the prototype
+- in JS it's done by the prototype
 - prototype is an object where the object inherits from
 - saving memory > put methods on prototype's constructor
 - prevents the multiplication of that method on every object
@@ -21,14 +21,14 @@ let me = {
 
 - object constructor:
 
-let me = new Object()...
+let me = new Object()
 
 - Object prototype is transferred to the new object > prototype chain (prototype hierarchy)
 - so Object.getPrototypeOf(me) equals to Object.prototype
 - we can do this with our own constructors
 */
 
-// setting and object prototype with setPrototypeOf
+// setting an object prototype with setPrototypeOf
 {
   let user = {
     active: true
@@ -40,7 +40,7 @@ let me = new Object()...
 
   // console.log(teacher)
 
-  // set proto from user to techer
+  // set proto from user to teacher
   // check __proto__
   Object.setPrototypeOf(teacher, user)
   console.log(teacher)

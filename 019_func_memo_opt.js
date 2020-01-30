@@ -38,7 +38,7 @@
     // now it's a object
     // key > stringVersion, value > total
     pow.calculated[stringVersion] = total
-    console.log(pow.calculated)
+    console.log("pow.calculated:", pow.calculated)
     return total
   }
 

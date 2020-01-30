@@ -44,8 +44,10 @@ Exception handling
   // doSomething()
 
   try {
+    console.log("Try")
     doSomething()
   } catch(e) {
+    console.log("Catch")
     console.log(e)
     console.log("Error caught")
   } finally {

@@ -17,13 +17,13 @@ function x(a, b) {
 let me = {
   name: "Pocok",
   test: function() {
-    console.log (this.name) // refers.to me.name ("Pocok")...
+    console.log (this.name) // refers to me.name ("Pocok")...
   }
 }
 */
 
 {
-  // other programming languages the next is the only usage of this
+  // in other programming languages the next is the only usage of this
   let me = {
     name: "Pocok",
     outPutMe: function() {
@@ -70,9 +70,9 @@ let me = {
   // empty object > refers to the new object (instance)
   // created by the Person constructor
   function Person() {
-    console.log("1st:", this)
+    console.log("1st:", this.name)
     this.name = "Pocok"
-    console.log("2nd:", this)
+    console.log("2nd:", this.name)
   }
 
   let person1 = new Person()
@@ -84,18 +84,18 @@ let me = {
 {
   function doStuff(input, input2) {
     console.log(input, input2)
-    console.log(this)
+    console.log("this:", this)
   }
 
-  console.log("Simple doStuff:")
+  console.log("doStuff with 1 variable:")
   doStuff(5)
 
   // change the value of this
-  // (valut to change, argument(s) (input) value we want to pass)
+  // value to change, argument(s) (input) value we want to pass
   console.log("Call method:")
   doStuff.call("hello", 5)
   doStuff.call("hello", 5, 10)
-  console.log(this)
+  console.log("this not changed permanently > window:", this)
 
   // apply method is similar
   // but put the passed arguments in an array
@@ -112,7 +112,7 @@ let me = {
 {
   function doStuff(input, input2) {
     console.log(input, input2)
-    console.log(this)
+    console.log("this:", this)
   }
 
   // invoke like the call method

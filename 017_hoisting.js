@@ -2,7 +2,7 @@
 Hoisting
 - function declarations and expressions are hoisted differently
 - hoisting
-  - JS codes scanned first
+  - when codes scanned first
     - variable declarations happens
   - then codes are executed line by line
 - all function declarations are hoisted
@@ -25,10 +25,10 @@ Hoisting
   var y = function() {
     console.log("Hoisted")
   }
+  y() // works here
 }
 
 {
-  // console.log(y) // error
   var x
   console.log(x)
   x = 10 // 10

@@ -112,8 +112,8 @@
   let teacher3 = new TeacherCtor("Master", ["math", "science"])
 
   console.log("student3 with ctor + prototype chain:", student3)
-  console.log("teacher3 with ctor + prototype chain", teacher3)
-  console.log("sayHello on prototype", teacher3.sayHello())
+  console.log("teacher3 with ctor + prototype chain:", teacher3)
+  console.log("sayHello on prototype:", teacher3.sayHello())
 
   // instanceof Operator
   // see if an object has a particular type

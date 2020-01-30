@@ -18,12 +18,12 @@ Object Oriented Javascript
 // this refers to the new object we are creating
 {
   function User0() {
-    console.log(this)
+    console.log("inside USer0:", this)
     this.name = "0"
   }
 
   let person0 = new User0()
-  console.log(person0)
+  console.log("person0", person0)
 
   function User(name, interests) {
     // properties
@@ -38,14 +38,14 @@ Object Oriented Javascript
   let me = new User("Pocok", ["cooking", "diving", "travelling", "coding", "music", "snowboarding"])
   // add new property
   me.membership = "Gold"
-  console.log(me)
+  console.log("me:", me)
 
   let person1 = new User("Mogyi", ["diving", "travelling", "detective stories", "politics"])
   let person2 = new User("Pista", ["gardening"])
   let person3 = new User("Mariska", ["knitting"])
-  console.log(person1)
-  console.log(person2)
-  console.log(person3)
+  console.log("person1", person1)
+  console.log("person2", person2)
+  console.log("person3", person3)
 
   person3.print()
 }
@@ -56,6 +56,7 @@ Object Oriented Javascript
 // do not prefix it with the new keyword
 // constructor is the recommended
 {
+  console.log("-----FACTORY FUNCTION PART-----")
   function User(name, interests) {
     let person = {
       name: name,
@@ -80,6 +81,7 @@ Object Oriented Javascript
 
 // Creating Prototype Methods for Constructor Functions
 {
+  console.log("-----PROTOTYPE METHODS FOR CTOR FUNCS-----")
   function User(name, interests) {
     this.name = name
     this.interests = interests

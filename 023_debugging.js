@@ -36,7 +36,7 @@
   // inspect > source > Event listener breakpoints > Mouse...
   // when you clicks > the debugging stops
 
-  // create a click event
+  // create an onmouseover event
   document.getElementById("only").onmouseover = () => console.log("Hover over")
 }
 
