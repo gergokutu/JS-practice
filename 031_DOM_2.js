@@ -21,7 +21,7 @@ console.log(list)
 // to be able to attach an event listener
 // we need an actual node instead of a HTML collection
 let ourList = list[0]
-console.log(ourList)
+console.log("ourList", ourList)
 
 ourList.onmouseenter = () => {
   console.log("mouse enter")
@@ -35,7 +35,7 @@ ourList.onmouseleave = () => {
   console.log("mouse leave")
   ourList.childNodes[1].childNodes[0].nodeValue = "Pasta"
   ourList.childNodes[3].childNodes[0].nodeValue = "Sauce"
-  // ourList.childNodes[5].childNodes[0].nodeValue = "Love Cheese"
+  // ourList.childNodes[5].childNodes[0].nodeValue = "Cheese"
   document.getElementById("cheese").innerText = "Cheese"
 
   // or erase the list
